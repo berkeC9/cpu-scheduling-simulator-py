@@ -1,0 +1,50 @@
+------------------------------------------------------------------------------------------------------
+Simulation Started: FCFS 
+
+Gantt Chart: 
+| P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 |
+0    8   12   21   26   28   34   37   47
+
+Execution Log: 
+t=0: P1 arrives
+t=0: P1 starts running
+t=8: P1 completes
+t=1: P2 arrives
+t=8: P2 starts running
+t=12: P2 completes
+t=2: P3 arrives
+t=12: P3 starts running
+t=21: P3 completes
+t=3: P4 arrives
+t=21: P4 starts running
+t=26: P4 completes
+t=10: P5 arrives
+t=26: P5 starts running
+t=28: P5 completes
+t=12: P6 arrives
+t=28: P6 starts running
+t=34: P6 completes
+t=15: P7 arrives
+t=34: P7 starts running
+t=37: P7 completes
+t=20: P8 arrives
+t=37: P8 starts running
+t=47: P8 completes
+
+Final Statistics: 
+PID   Arr   Burst   Compl   TAT   WT    RT   
+--------------------------------------------------
+P1    0     8       8       8     0     0    
+P2    1     4       12      11    7     7    
+P3    2     9       21      19    10    10   
+P4    3     5       26      23    18    18   
+P5    10    2       28      18    16    16   
+P6    12    6       34      22    16    16   
+P7    15    3       37      22    19    19   
+P8    20    10      47      27    17    17   
+
+Summary: 
+Average Turnaround Time : 18.75
+Average Waiting Time    : 12.88
+Average Response Time   : 12.88
+Total Context Switches  : 7

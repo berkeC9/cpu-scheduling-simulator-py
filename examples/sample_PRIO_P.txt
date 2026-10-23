@@ -1,0 +1,54 @@
+------------------------------------------------------------------------------------------------------
+Simulation Started: PRIO_P 
+
+Gantt Chart: 
+| P1 | P2 | P1 | P5 | P1 | P4 | P7 | P3 | P6 | P8 |
+0    1    5   10   12   14   19   22   31   37   47
+
+Execution Log: 
+t=0: P1 arrives [Prio:2]
+t=0: P1 starts running
+t=1: P2 arrives [Prio:1]
+t=1: P2 preempts P1
+t=1: P2 starts running
+t=2: P3 arrives [Prio:3]
+t=3: P4 arrives [Prio:2]
+t=5: P2 completes
+t=5: P1 resumes
+t=10: P5 arrives [Prio:1]
+t=10: P5 preempts P1
+t=10: P5 starts running
+t=12: P5 completes
+t=12: P6 arrives [Prio:3]
+t=12: P1 resumes
+t=14: P1 completes
+t=14: P4 starts running
+t=15: P7 arrives [Prio:2]
+t=19: P4 completes
+t=19: P7 starts running
+t=20: P8 arrives [Prio:4]
+t=22: P7 completes
+t=22: P3 starts running
+t=31: P3 completes
+t=31: P6 starts running
+t=37: P6 completes
+t=37: P8 starts running
+t=47: P8 completes
+
+Final Statistics: 
+PID   Arr   Burst   Compl   TAT   WT    RT   
+--------------------------------------------------
+P1    0     8       14      14    6     0    
+P2    1     4       5       4     0     0    
+P3    2     9       31      29    20    20   
+P4    3     5       19      16    11    11   
+P5    10    2       12      2     0     0    
+P6    12    6       37      25    19    19   
+P7    15    3       22      7     4     4    
+P8    20    10      47      27    17    17   
+
+Summary: 
+Average Turnaround Time : 15.50
+Average Waiting Time    : 9.62
+Average Response Time   : 8.88
+Total Context Switches  : 9

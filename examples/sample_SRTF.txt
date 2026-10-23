@@ -1,0 +1,52 @@
+------------------------------------------------------------------------------------------------------
+Simulation Started: SRTF 
+
+Gantt Chart: 
+| P1 | P2 | P4 | P5 | P6 | P7 | P1 | P3 | P8 |
+0    1    5   10   12   18   21   28   37   47
+
+Execution Log: 
+t=0: P1 arrives
+t=0: P1 starts running
+t=1: P2 arrives
+t=1: P2 preempts P1
+t=1: P2 starts running
+t=2: P3 arrives
+t=3: P4 arrives
+t=5: P2 completes
+t=5: P4 starts running
+t=10: P4 completes
+t=10: P5 arrives
+t=10: P5 starts running
+t=12: P5 completes
+t=12: P6 arrives
+t=12: P6 starts running
+t=15: P7 arrives
+t=18: P6 completes
+t=18: P7 starts running
+t=20: P8 arrives
+t=21: P7 completes
+t=21: P1 resumes
+t=28: P1 completes
+t=28: P3 starts running
+t=37: P3 completes
+t=37: P8 starts running
+t=47: P8 completes
+
+Final Statistics: 
+PID   Arr   Burst   Compl   TAT   WT    RT   
+--------------------------------------------------
+P1    0     8       28      28    20    0    
+P2    1     4       5       4     0     0    
+P3    2     9       37      35    26    26   
+P4    3     5       10      7     2     2    
+P5    10    2       12      2     0     0    
+P6    12    6       18      6     0     0    
+P7    15    3       21      6     3     3    
+P8    20    10      47      27    17    17   
+
+Summary: 
+Average Turnaround Time : 14.38
+Average Waiting Time    : 8.50
+Average Response Time   : 6.00
+Total Context Switches  : 8

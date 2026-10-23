@@ -1,0 +1,42 @@
+------------------------------------------------------------------------------------------------------
+Simulation Started: SJF 
+
+Gantt Chart: 
+| P1 | P2 | P5 | P4 | P7 | P6 | P3 | P8 |
+0    8   12   14   19   22   28   37   47
+
+Execution Log: 
+t=0: P1 starts running
+t=8: P1 completes
+t=8: P2 starts running
+t=12: P2 completes
+t=12: P5 starts running
+t=14: P5 completes
+t=14: P4 starts running
+t=19: P4 completes
+t=19: P7 starts running
+t=22: P7 completes
+t=22: P6 starts running
+t=28: P6 completes
+t=28: P3 starts running
+t=37: P3 completes
+t=37: P8 starts running
+t=47: P8 completes
+
+Final Statistics: 
+PID   Arr   Burst   Compl   TAT   WT    RT   
+--------------------------------------------------
+P1    0     8       8       8     0     0    
+P2    1     4       12      11    7     7    
+P3    2     9       37      35    26    26   
+P4    3     5       19      16    11    11   
+P5    10    2       14      4     2     2    
+P6    12    6       28      16    10    10   
+P7    15    3       22      7     4     4    
+P8    20    10      47      27    17    17   
+
+Summary: 
+Average Turnaround Time : 15.50
+Average Waiting Time    : 9.62
+Average Response Time   : 9.62
+Total Context Switches  : 7
